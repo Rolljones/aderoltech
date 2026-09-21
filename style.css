@@ -27,7 +27,7 @@
 
   /* Medium screen */
 
-  --med-text-one: 0.9rem;
+  --med-text-one: 1rem;
   --med-text-two: 1.2rem;
 
   --med-head-one: 4rem;
@@ -35,10 +35,10 @@
   --med-head-three: 1.3rem;
 
   /* Small screen */
-  --sma-text-one: 0.9rem;
+  --sma-text-one: 1rem;
   --sma-text-two: 1.1rem;
 
-  --sma-head-one: 2.7rem;
+  --sma-head-one: 2.9rem;
   --sma-head-two: 2rem;
   --sma-head-three: 1.2rem;
 }
@@ -193,6 +193,8 @@ main .hero-section > .hero-text {
 .hero-text p {
   color: var(--muted);
   text-align: center;
+  font-size: var(--big-text-two);
+  width: 80%;
 }
 
 .button-flex {
@@ -219,20 +221,20 @@ main .hero-section > .hero-text {
 
 .button-flex .btn-two {
   padding: 12px 100px;
-  background: var(--light-bg);
-  color: var(--text);
+  background: var(--text);
+  color: #fff;
   border-radius: 30px;
   transition:
     background 0.2s,
     color 0.2s;
   font-size: var(--big-text-one);
   font-weight: 500;
-  border: 1px solid var(--muted);
 }
 
 .button-flex .btn-two:hover {
-  background: var(--text);
-  color: #fff;
+  background: var(--light-bg);
+  color: var(--text);
+  border: 1px solid var(--muted);
 }
 
 /* iPad screens */
@@ -299,6 +301,12 @@ main .hero-section > .hero-text {
     color: var(--green);
   }
 
+  .hero-text p {
+    color: var(--muted);
+    text-align: center;
+    font-size: var(--med-text-two);
+  }
+
   .button-flex {
     display: flex;
     justify-content: center;
@@ -306,38 +314,22 @@ main .hero-section > .hero-text {
   }
 
   .button-flex .btn-one {
-    padding: 12px 100px;
-    background: var(--green);
-    color: #fff;
-    border-radius: 30px;
-    transition:
-      background 0.2s,
-      color 0.2s;
     font-size: var(--med-text-one);
-    font-weight: 500;
   }
 
-  .button-flex .btn-one:hover {
+  .button-flex .btn-one:active {
     background: var(--light-green);
   }
 
   .button-flex .btn-two {
-    padding: 12px 100px;
-    background: var(--light-bg);
-    color: var(--text);
-    border-radius: 30px;
-    transition:
-      background 0.2s,
-      color 0.2s;
     font-size: var(--med-text-one);
-    font-weight: 500;
-    border: 1px solid var(--muted);
   }
 
-  .button-flex .btn-two:hover {
-    background: var(--text);
-    color: #fff;
-  }
+  .button-flex .btn-two:active {
+  background: var(--light-bg);
+  color: var(--text);
+  border: 1px solid var(--muted);
+}
 }
 
 /* Tablets and phones */
@@ -392,12 +384,14 @@ main .hero-section > .hero-text {
     width: 100%;
     padding: 16px 5%;
     border-top: 1px solid #eee;
+    font-size: var(--sma-text-one);
   }
 
   .nav-links .btn {
     margin: 12px 5%;
     width: calc(100% - 10%);
     text-align: center;
+    font-size: var(--sma-text-one);
   }
 
   main {
@@ -415,6 +409,12 @@ main .hero-section > .hero-text {
     color: var(--green);
   }
 
+  .hero-text p {
+    color: var(--muted);
+    text-align: center;
+    font-size: var(--sma-text-two);
+  }
+
   .button-flex {
     display: flex;
     flex-direction: column;
@@ -422,36 +422,20 @@ main .hero-section > .hero-text {
   }
 
   .button-flex .btn-one {
-    padding: 12px 100px;
-    background: var(--green);
-    color: #fff;
-    border-radius: 30px;
-    transition:
-      background 0.2s,
-      color 0.2s;
     font-size: var(--sma-text-one);
-    font-weight: 500;
   }
 
-  .button-flex .btn-one:hover {
+  .button-flex .btn-one:active {
     background: var(--light-green);
   }
 
   .button-flex .btn-two {
-    padding: 12px 100px;
-    background: var(--light-bg);
-    color: var(--text);
-    border-radius: 30px;
-    transition:
-      background 0.2s,
-      color 0.2s;
     font-size: var(--sma-text-one);
-    font-weight: 500;
-    border: 1px solid var(--muted);
   }
 
-  .button-flex .btn-two:hover {
-    background: var(--text);
-    color: #fff;
-  }
+  .button-flex .btn-two:active {
+  background: var(--light-bg);
+  color: var(--text);
+  border: 1px solid var(--muted);
+}
 }

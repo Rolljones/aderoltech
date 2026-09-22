@@ -1,16 +1,13 @@
-const faders = document.querySelectorAll(".fade-in");
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) entry.target.classList.add("visible");
+    });
+  },
+  { threshold: 0.2 },
+);
 
-const appearOnScroll = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-    }
-  });
-});
-
-faders.forEach((fader) => {
-  appearOnScroll.observe(fader);
-});
+document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
 
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");

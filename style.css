@@ -15,11 +15,11 @@
 
   --border: #e2e8e5;
 
-  --shadow: 0 20px 60px rgba(0, 0, 0, 0.07);
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.107);
 
   /* big screen */
   --big-text-one: 1rem;
-  --big-text-two: 1.4rem;
+  --big-text-two: 1.2rem;
 
   --big-head-one: 4.5rem;
   --big-head-two: 3rem;
@@ -40,7 +40,19 @@
 
   --sma-head-one: 2.9rem;
   --sma-head-two: 2rem;
-  --sma-head-three: 1.2rem;
+  --sma-head-three: 1.3rem;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 a {
@@ -182,9 +194,9 @@ main .hero-section > .hero-text {
 }
 
 .hero-text h3 {
-    text-transform: uppercase;
+  text-transform: uppercase;
   font-size: var(--big-head-three);
-  color:var(--green);
+  color: var(--green);
 }
 
 .hero-text h1 {
@@ -252,28 +264,59 @@ main .issue {
   background-color: var(--white);
   padding: 7rem 3rem;
   text-align: center;
-  gap:1rem;
+  gap: 1rem;
 }
 
 .issue h3 {
   text-transform: uppercase;
   font-size: var(--big-head-three);
-  color:var(--green);
+  color: var(--green);
 }
 
 .issue h2 {
   font-size: var(--big-head-two);
   line-height: 3rem;
-  width:80%;
+  width: 80%;
 }
 
 .issue p {
   font-size: var(--big-text-two);
-  color:var(--muted);
-  width:80%;
+  color: var(--muted);
+  width: 80%;
 }
 
+.issue .issue-flex {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 2rem;
+}
 
+.issue-flex .issue-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem;
+  align-items: center;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.issue-item h2 {
+  font-size: var(--big-head-three);
+  color: var(--green);
+  line-height: 1.8rem;
+}
+
+.issue-item h3 {
+  font-size: var(--big-text-two);
+  color: var(--text);
+}
+
+.issue-item p {
+  font-size: var(--big-text-one);
+}
 
 /* iPad screens */
 
@@ -295,9 +338,9 @@ main .issue {
   }
 
   .logo h3 {
-  font-size: var(--med-head-three);
-  color: var(--green);
-}
+    font-size: var(--med-head-three);
+    color: var(--green);
+  }
 
   .nav-links {
     position: absolute;
@@ -334,14 +377,14 @@ main .issue {
   }
 
   .hero-text {
-    padding: 0 1rem 6rem;
+    padding: 0 1.5rem 6rem 1.5rem;
   }
 
   .hero-text h3 {
     text-transform: uppercase;
-  font-size: var(--med-head-three);
-  color:var(--green);
-}
+    font-size: var(--med-head-three);
+    color: var(--green);
+  }
 
   .hero-text h1 {
     font-size: var(--med-head-one);
@@ -385,26 +428,41 @@ main .issue {
   }
 
   main .issue {
-    padding: 5rem 1rem;
+    padding: 5rem 1.5rem;
   }
 
   .issue h3 {
-  text-transform: uppercase;
-  font-size: var(--med-head-three);
-  color:var(--green);
-}
+    text-transform: uppercase;
+    font-size: var(--med-head-three);
+    color: var(--green);
+  }
 
-.issue h2 {
-  font-size: var(--med-head-two);
-  line-height: 2.5rem;
-  width:100%;
-}
+  .issue h2 {
+    font-size: var(--med-head-two);
+    line-height: 2.5rem;
+    width: 100%;
+  }
 
-.issue p {
-  font-size: var(--med-text-one);
-  color:var(--muted);
-  width:100%;
-}
+  .issue p {
+    font-size: var(--med-text-one);
+    color: var(--muted);
+    width: 100%;
+  }
+
+  .issue-item h2 {
+    font-size: var(--med-head-three);
+    color: var(--green);
+    line-height: 1.8rem;
+  }
+
+  .issue-item h3 {
+    font-size: var(--med-text-two);
+    color: var(--text);
+  }
+
+  .issue-item p {
+    font-size: var(--med-text-one);
+  }
 }
 
 /* Tablets and phones */
@@ -432,9 +490,9 @@ main .issue {
   }
 
   .logo h3 {
-  font-size: var(--sma-head-three);
-  color: var(--green);
-}
+    font-size: var(--sma-head-three);
+    color: var(--green);
+  }
 
   .logo img {
     width: 75px;
@@ -479,15 +537,14 @@ main .issue {
   }
 
   .hero-text {
-    padding: 0 1rem 6rem;
+    padding: 0 1.5rem 6rem 1.5rem;
   }
 
   .hero-text h3 {
     text-transform: uppercase;
-  font-size: var(--sma-head-three);
-  color:var(--green);
-}
-
+    font-size: var(--sma-head-three);
+    color: var(--green);
+  }
 
   .hero-text h1 {
     font-size: var(--sma-head-one);
@@ -529,26 +586,45 @@ main .issue {
     color: var(--text);
     border: 1px solid var(--muted);
   }
-  
+
   main .issue {
-    padding: 5rem 1rem;
+    padding: 5rem 1.5rem;
   }
 
   .issue h3 {
-  text-transform: uppercase;
-  font-size: var(--sma-head-three);
-  color:var(--green);
-}
+    text-transform: uppercase;
+    font-size: var(--sma-head-three);
+    color: var(--green);
+  }
 
-.issue h2 {
-  font-size: var(--sma-head-two);
-  line-height: 2.5rem;
-  width:100%;
-}
+  .issue h2 {
+    font-size: var(--sma-head-two);
+    line-height: 2.5rem;
+    width: 100%;
+  }
 
-.issue p {
-  font-size: var(--sma-text-one);
-  color:var(--muted);
-  width:100%;
-}
+  .issue p {
+    font-size: var(--sma-text-one);
+    color: var(--muted);
+    width: 100%;
+  }
+
+  .issue .issue-flex {
+    grid-template-columns: 1fr;
+  }
+
+  .issue-item h2 {
+    font-size: var(--sma-head-three);
+    color: var(--green);
+    line-height: 1.8rem;
+  }
+
+  .issue-item h3 {
+    font-size: var(--sma-text-two);
+    color: var(--text);
+  }
+
+  .issue-item p {
+    font-size: var(--sma-text-one);
+  }
 }

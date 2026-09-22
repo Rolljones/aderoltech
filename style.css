@@ -15,7 +15,7 @@
 
   --border: #e2e8e5;
 
-  --shadow: 0 20px 60px rgba(0, 0, 0, 0.107);
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.065);
 
   /* big screen */
   --big-text-one: 1rem;
@@ -47,8 +47,8 @@
   opacity: 0;
   transform: translateY(40px);
   transition:
-    opacity 0.6s ease,
-    transform 0.6s ease;
+    opacity 1.5s ease,
+    transform 1.5s ease;
 }
 .fade-in.visible {
   opacity: 1;
@@ -275,7 +275,7 @@ main .issue {
 
 .issue h2 {
   font-size: var(--big-head-two);
-  line-height: 3rem;
+  line-height: 3.5rem;
   width: 80%;
 }
 
@@ -303,6 +303,14 @@ main .issue {
   box-shadow: var(--shadow);
 }
 
+.issue-flex .issue-item:hover {
+  box-shadow: none;
+  background-color: var(--gray-bg);
+  transition:
+    background 0.5s,
+    box-shadow 0.5s;
+}
+
 .issue-item h2 {
   font-size: var(--big-head-three);
   color: var(--green);
@@ -316,6 +324,91 @@ main .issue {
 
 .issue-item p {
   font-size: var(--big-text-one);
+}
+
+main .solution {
+  padding: 7rem 3rem;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  grid-template-rows: auto;
+  align-items: center;
+}
+
+.solution .solution-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.solution-text h3 {
+  text-transform: uppercase;
+  font-size: var(--big-head-three);
+  color: var(--green);
+}
+
+.solution-text h2 {
+  font-size: var(--big-head-two);
+  line-height: 3.5rem;
+}
+
+.solution-text p {
+  font-size: var(--big-text-two);
+  color: var(--muted);
+}
+
+.solution-text a {
+  padding: 12px 100px;
+  background: var(--green);
+  color: #fff;
+  border-radius: 30px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  font-size: var(--big-text-one);
+  font-weight: 500;
+  text-transform: capitalize;
+  width: fit-content;
+}
+
+.solution-text a:hover {
+  background: var(--light-green);
+}
+
+.solution .solution-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
+  gap: 2rem;
+}
+
+.solution-grid .solution-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.solution-box h2 {
+  font-size: var(--big-head-three);
+  color: var(--green);
+  line-height: 1.8rem;
+}
+
+.solution-box h3 {
+  font-size: var(--big-text-two);
+  color: var(--text);
+}
+
+.solution-box p {
+  font-size: var(--big-text-one);
+  color: var(--muted);
+}
+
+main .serve {
+  padding: 7rem 3rem;
+  background-color: var(--white);
 }
 
 /* iPad screens */
@@ -449,6 +542,14 @@ main .issue {
     width: 100%;
   }
 
+  .issue-flex .issue-item:active {
+    box-shadow: none;
+    background-color: var(--gray-bg);
+    transition:
+      background 0.5s,
+      box-shadow 0.5s;
+  }
+
   .issue-item h2 {
     font-size: var(--med-head-three);
     color: var(--green);
@@ -462,6 +563,58 @@ main .issue {
 
   .issue-item p {
     font-size: var(--med-text-one);
+  }
+
+  main .solution {
+    padding: 5rem 1.5rem;
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .solution .solution-text {
+    align-items: center;
+  }
+
+  .solution-text h3 {
+    font-size: var(--med-head-three);
+    text-align: center;
+  }
+
+  .solution-text h2 {
+    font-size: var(--med-head-two);
+    line-height: 2.5rem;
+    text-align: center;
+  }
+
+  .solution-text p {
+    font-size: var(--med-text-one);
+    text-align: center;
+  }
+
+  .solution-text a:active {
+    background: var(--light-green);
+  }
+
+  .solution-box h2 {
+    font-size: var(--med-head-three);
+    color: var(--green);
+    line-height: 1.8rem;
+  }
+
+  .solution-box h3 {
+    font-size: var(--med-text-two);
+    color: var(--text);
+  }
+
+  .solution-box p {
+    font-size: var(--med-text-one);
+    color: var(--muted);
+  }
+
+  main .serve {
+    padding: 5rem 1.5rem;
   }
 }
 
@@ -613,6 +766,18 @@ main .issue {
     grid-template-columns: 1fr;
   }
 
+  .issue-flex .issue-item {
+    padding: 2rem 5rem;
+  }
+
+  .issue-flex .issue-item:active {
+    box-shadow: none;
+    background-color: var(--gray-bg);
+    transition:
+      background 0.5s,
+      box-shadow 0.5s;
+  }
+
   .issue-item h2 {
     font-size: var(--sma-head-three);
     color: var(--green);
@@ -626,5 +791,70 @@ main .issue {
 
   .issue-item p {
     font-size: var(--sma-text-one);
+  }
+
+  main .solution {
+    padding: 5rem 1.5rem;
+  }
+
+  main .solution {
+    padding: 5rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 5rem;
+  }
+
+  .solution .solution-text {
+    align-items: center;
+  }
+
+  .solution-text h3 {
+    font-size: var(--sma-head-three);
+    text-align: center;
+  }
+
+  .solution-text h2 {
+    font-size: var(--sma-head-two);
+    line-height: 2.5rem;
+    text-align: center;
+  }
+
+  .solution-text p {
+    font-size: var(--sma-text-one);
+    text-align: center;
+  }
+
+  .solution-text a:active {
+    background: var(--light-green);
+  }
+
+  .solution .solution-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .solution-grid .solution-box {
+    padding: 2rem 5rem;
+  }
+
+  .solution-box h2 {
+    font-size: var(--sma-head-three);
+    color: var(--green);
+    line-height: 1.8rem;
+  }
+
+  .solution-box h3 {
+    font-size: var(--sma-text-two);
+    color: var(--text);
+  }
+
+  .solution-box p {
+    font-size: var(--sma-text-one);
+    color: var(--muted);
+  }
+
+  main .serve {
+    padding: 5rem 1.5rem;
   }
 }

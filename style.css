@@ -65,13 +65,11 @@ html {
 }
 
 body {
-  background: var(--light-bg);
   color: var(--text);
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  background: var(--light-bg);
 }
 
 .navbar {
@@ -169,7 +167,11 @@ body {
 }
 
 main {
-  padding: 10rem 3rem;
+  padding: 10rem 0 9rem 0;
+}
+
+.hero-text {
+  padding: 0 3rem 7rem;
 }
 
 main .hero-section > .hero-text {
@@ -177,6 +179,12 @@ main .hero-section > .hero-text {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+}
+
+.hero-text h3 {
+    text-transform: uppercase;
+  font-size: var(--big-head-three);
+  color:var(--green);
 }
 
 .hero-text h1 {
@@ -237,6 +245,36 @@ main .hero-section > .hero-text {
   border: 1px solid var(--muted);
 }
 
+main .issue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+  padding: 7rem 3rem;
+  text-align: center;
+  gap:1rem;
+}
+
+.issue h3 {
+  text-transform: uppercase;
+  font-size: var(--big-head-three);
+  color:var(--green);
+}
+
+.issue h2 {
+  font-size: var(--big-head-two);
+  line-height: 3rem;
+  width:80%;
+}
+
+.issue p {
+  font-size: var(--big-text-two);
+  color:var(--muted);
+  width:80%;
+}
+
+
+
 /* iPad screens */
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -255,6 +293,11 @@ main .hero-section > .hero-text {
   .navbar {
     padding: 0.8rem 1rem 0.8rem 0.5rem;
   }
+
+  .logo h3 {
+  font-size: var(--med-head-three);
+  color: var(--green);
+}
 
   .nav-links {
     position: absolute;
@@ -287,8 +330,18 @@ main .hero-section > .hero-text {
   }
 
   main {
-    padding: 8rem 1rem;
+    padding: 9rem 0 6rem 0;
   }
+
+  .hero-text {
+    padding: 0 1rem 6rem;
+  }
+
+  .hero-text h3 {
+    text-transform: uppercase;
+  font-size: var(--med-head-three);
+  color:var(--green);
+}
 
   .hero-text h1 {
     font-size: var(--med-head-one);
@@ -326,9 +379,31 @@ main .hero-section > .hero-text {
   }
 
   .button-flex .btn-two:active {
-  background: var(--light-bg);
-  color: var(--text);
-  border: 1px solid var(--muted);
+    background: var(--light-bg);
+    color: var(--text);
+    border: 1px solid var(--muted);
+  }
+
+  main .issue {
+    padding: 5rem 1rem;
+  }
+
+  .issue h3 {
+  text-transform: uppercase;
+  font-size: var(--med-head-three);
+  color:var(--green);
+}
+
+.issue h2 {
+  font-size: var(--med-head-two);
+  line-height: 2.5rem;
+  width:100%;
+}
+
+.issue p {
+  font-size: var(--med-text-one);
+  color:var(--muted);
+  width:100%;
 }
 }
 
@@ -355,6 +430,11 @@ main .hero-section > .hero-text {
   .navbar {
     padding: 0.8rem 1rem 0.8rem 0.5rem;
   }
+
+  .logo h3 {
+  font-size: var(--sma-head-three);
+  color: var(--green);
+}
 
   .logo img {
     width: 75px;
@@ -395,8 +475,19 @@ main .hero-section > .hero-text {
   }
 
   main {
-    padding: 8rem 1rem;
+    padding: 9rem 0 6rem 0;
   }
+
+  .hero-text {
+    padding: 0 1rem 6rem;
+  }
+
+  .hero-text h3 {
+    text-transform: uppercase;
+  font-size: var(--sma-head-three);
+  color:var(--green);
+}
+
 
   .hero-text h1 {
     font-size: var(--sma-head-one);
@@ -434,8 +525,30 @@ main .hero-section > .hero-text {
   }
 
   .button-flex .btn-two:active {
-  background: var(--light-bg);
-  color: var(--text);
-  border: 1px solid var(--muted);
+    background: var(--light-bg);
+    color: var(--text);
+    border: 1px solid var(--muted);
+  }
+  
+  main .issue {
+    padding: 5rem 1rem;
+  }
+
+  .issue h3 {
+  text-transform: uppercase;
+  font-size: var(--sma-head-three);
+  color:var(--green);
+}
+
+.issue h2 {
+  font-size: var(--sma-head-two);
+  line-height: 2.5rem;
+  width:100%;
+}
+
+.issue p {
+  font-size: var(--sma-text-one);
+  color:var(--muted);
+  width:100%;
 }
 }
